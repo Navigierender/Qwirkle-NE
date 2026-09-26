@@ -22,7 +22,7 @@ reloadrequest == Das Spiel muss neu geladen werden,\um diese Einstellung zu übe
 --- PLAYERSELECT -----------------------------------------
 
 playerselect_title == Wie viele Spieler?
-playerselect_content == Qwirkle wird mit 2 bis 4\Spielern gespielt.\Nutze die Pfeile, um\auszuwählen, wie viele von\euch mitspielen. Jeder\Spieler erhält einen\zufälligen Namen. Drücke auf\Spielen,sobald ihr\bereit seid!
+playerselect_content == Qwirkle wird mit 2 bis 4\Spielern gespielt.\Nutze die Pfeile, um\auszuwählen, wie viele von\euch mitspielen. Jeder\Spieler erhält einen\zufälligen Namen. Drücke auf\Spielen, sobald ihr\bereit seid!
 
 --- GAMEPLAY ---------------------------------------------
 
