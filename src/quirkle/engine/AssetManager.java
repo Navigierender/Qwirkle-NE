@@ -48,6 +48,27 @@ public class AssetManager {
         }
     }
 
+    //Fallback textures only loads if AssetManager needs it
+    private static BufferedImage getFallbackTexture() {
+        if (fallbackTexture == null) {
+            int size = 128;
+            int halfSize = size / 2;
+
+            fallbackTexture = new BufferedImage(size, size, BufferedImage.TYPE_INT_RGB);
+            Graphics2D g = fallbackTexture.createGraphics();
+            g.setColor(Color.MAGENTA);
+            g.fillRect(0, 0, halfSize, halfSize);
+            g.fillRect(halfSize, halfSize, halfSize, halfSize);
+            g.setColor(Color.BLACK);
+            g.fillRect(halfSize, 0, halfSize, halfSize);
+            g.fillRect(0, halfSize, halfSize, halfSize);
+            g.dispose();
+        }
+        return fallbackTexture;
+    }
+
+    //----------[ FONT ]------------------------------------------------------------------------------------------------------------------------------------
+
     private static final Map<String, Font> fontCache = new HashMap<>();
     private static final Font fallbackFont = new Font("Arial", Font.PLAIN, 24);
 
@@ -72,7 +93,10 @@ public class AssetManager {
         }
     }
 
+    //----------[ LANG ]------------------------------------------------------------------------------------------------------------------------------------
+
     private static LangPackage lang = null;
+    private static String langIdentifier = null;
 
     public static void setLang(String identifier) {
         if (identifier == null || identifier.isEmpty()) {
@@ -92,6 +116,7 @@ public class AssetManager {
 
             try (Scanner langReader = new Scanner(in)) {
                 lang = new LangPackage(langReader);
+                langIdentifier = identifier;
             }
         } catch (IOException e) {
             EngineConfig.message("failed to process lang file at " + path, AssetManager.class.getSimpleName(), EngineConfig.messageType.ERROR);
@@ -102,6 +127,18 @@ public class AssetManager {
         if (lang.elements.containsKey(identifier)) return lang.elements.get(identifier);
         else return "CURRENT LANG DOESNT CONTAIN KEY: " + identifier;
     }
+
+    /** @return the identifier last passed to {@link #setLang(String)} (e.g. "en", "de") */
+    public static String getLangIdentifier() {
+        return langIdentifier;
+    }
+
+    /** @return the display name declared on the first line of the currently loaded .lang file (e.g. "Deutsch") */
+    public static String getLangName() {
+        return lang != null ? lang.languageName : "";
+    }
+
+    //----------[ SOUND ]------------------------( credit reference https://stackoverflow.com/questions/26305/how-can-i-play-sound-in-java )--------------
 
     private static final Map<String, byte[]> soundCache = new HashMap<>();
     private static void fallbackSound(String identifier) {
@@ -137,7 +174,7 @@ public class AssetManager {
     public static void playSound(String identifier, double volume) {
         if (identifier == null || identifier.isEmpty()) { fallbackSound(identifier); return; }
 
-        identifier = EngineConfig.ASSET_ORIGIN + EngineConfig.SOUND_SUBDIR + identifier + ".wav";
+        identifier = EngineConfig.ASSET_ORIGIN + EngineConfig.SOUND_SUBDIR + "/" + identifier + ".wav";
 
         if (soundCache.containsKey(identifier)) { playRawBytes(soundCache.get(identifier), volume); return; }
 
@@ -149,24 +186,5 @@ public class AssetManager {
         } catch (Exception e) {
             fallbackSound(identifier);
         }
-    }
-
-    //Fallback textures only loads if AssetManager needs it
-    private static BufferedImage getFallbackTexture() {
-        if (fallbackTexture == null) {
-            int size = 128;
-            int halfSize = size / 2;
-
-            fallbackTexture = new BufferedImage(size, size, BufferedImage.TYPE_INT_RGB);
-            Graphics2D g = fallbackTexture.createGraphics();
-            g.setColor(Color.MAGENTA);
-            g.fillRect(0, 0, halfSize, halfSize);
-            g.fillRect(halfSize, halfSize, halfSize, halfSize);
-            g.setColor(Color.BLACK);
-            g.fillRect(halfSize, 0, halfSize, halfSize);
-            g.fillRect(0, halfSize, halfSize, halfSize);
-            g.dispose();
-        }
-        return fallbackTexture;
     }
 }

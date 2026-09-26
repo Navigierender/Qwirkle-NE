@@ -4,11 +4,8 @@ import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 /**
- * Reads and writes the debug mode's plain-text console on {@code System.in}/{@code System.out}.
- *
- * @note Knows only lines and numbers; the game's own types are read and formatted by
- *       {@link DebugPrompts}.
- * @note Every {@code read} method loops until the input parses, so a caller never sees a bad value.
+ * Simple console input and output for the debug mode.
+ * @note the read methods ask again until the input is valid
  */
 public final class DebugConsole {
 
@@ -28,7 +25,7 @@ public final class DebugConsole {
         System.out.println();
     }
 
-    /** Prints {@code title} between two separators, preceded by a blank line. */
+    /** prints a title between two separator lines */
     public static void printHeading(String title) {
         System.out.println();
         System.out.println("-".repeat(SEPARATOR_WIDTH));
@@ -42,9 +39,8 @@ public final class DebugConsole {
     }
 
     /**
-     * @return the next line of input, trimmed
-     * @throws IllegalStateException if the game was not started from a terminal, so there is no
-     *         console to read from
+     * @return the next input line, trimmed
+     * @throws IllegalStateException if there is no console (game not started from a terminal)
      */
     public static String readLine(String prompt) {
         System.out.print(prompt + " > ");
@@ -55,7 +51,7 @@ public final class DebugConsole {
         }
     }
 
-    /** @return the next line parsed as a whole number, re-asking until one is entered. */
+    /** asks until a whole number is entered */
     public static int readInt(String prompt) {
         while (true) {
             String input = readLine(prompt);
@@ -67,7 +63,7 @@ public final class DebugConsole {
         }
     }
 
-    /** @return a whole number within {@code min}..{@code max} inclusive, re-asking until it fits. */
+    /** asks until a number between min and max (inclusive) is entered */
     public static int readInt(String prompt, int min, int max) {
         while (true) {
             int value = readInt(prompt + " (" + min + ".." + max + ")");
@@ -76,10 +72,7 @@ public final class DebugConsole {
         }
     }
 
-    /**
-     * @return the answer to a yes/no question, re-asking until it is one
-     * @note Accepts {@code j} alongside {@code y}, since the prompts are read by German testers too.
-     */
+    /** asks a yes/no question until y or n is entered ("j" works too) */
     public static boolean readYesNo(String prompt) {
         while (true) {
             String input = readLine(prompt + " (y/n)").toLowerCase();

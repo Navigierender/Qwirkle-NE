@@ -1,13 +1,28 @@
 English
 
---- STARTMENU --------------------------------------------
+--- MENUS ------------------------------------------------
 
-title == QWIRKLE
 play == Play
 settings == Settings
 credits == Credits
 quit == Quit
+apply == Apply
 return == Return
+options == Options
+tutorial == Tutorial
+mainmenu == Main menu
+language == Language
+volume == Volume
+switch == Switch
+proceed == Proceed
+cancel == Cancel
+player == Player
+reloadrequest == The game will need to\reload to apply this setting\Gamestates will be lost
+
+--- PLAYERSELECT -----------------------------------------
+
+playerselect_title == How many players?
+playerselect_content == Qwirkle is played by 2 to 4\players.\Use the arrows to choose\how many of\you are playing.\\Every player gets a\random name. Press Play when\you're ready!
 
 --- GAMEPLAY ---------------------------------------------
 
@@ -16,24 +31,56 @@ last_round == LAST ROUND
 points_last_round == POINTS LAST ROUND
 in_bag == IN BAG
 game_settings == SETTINGS
-turn == TURN
-turn_place_tile == PLACE A TILE
-turn_tile_placed == TILE PLACED
-turn_tiles_placed == TILES PLACED
+turn == Turn
+turn_place_tile == Place a tile
+turn_tile_placed == Tile placed
+turn_tiles_placed == Tiles placed
+
+--- TUTORIAL ---------------------------------------------
+
+tutorial_intro_title == Tutorial
+tutorial_intro_content == Welcome to Qwirkle!\This tutorial shows you the game screen\and explains how to play.\\You can open the menu at any time\by pressing [ ESC ].\\Press [ ENTER ] to continue
+
+tutorial_playerPoints_title == Points
+tutorial_playerPoints_content == Shows the points of the current player
+
+tutorial_bagIndicator_title == Tile Bag
+tutorial_bagIndicator_content == Shows how many tiles are\left in the bag.\After your turn your hand is\filled up from here
+
+tutorial_nameIndicator_title == Turn Order
+tutorial_nameIndicator_content == The big name is the player\whose turn it is.\The names behind are next
+
+tutorial_cardHotbar_title == Your Tiles
+tutorial_cardHotbar_content == These are the tiles in your hand.\Click a tile to select it,\click it again to unselect it
+
+tutorial_playground_title == Board
+tutorial_playground_content == This is the board where you place your tiles
+
+tutorial_rules_title == How to play
+tutorial_rules_content == Placing tiles\Place one or more tiles in a single row or column, without gaps.\Your tiles must touch a tile that is already on the board.\All tiles in a line share one color or one symbol,\and the same tile can't be in a line twice.\\Points\Every line you build or extend gives 1 point per tile in it.\A tile can count for its row and its column.\A line of 6 tiles is a Qwirkle and gives 6 extra points!\\Game end\The game ends when the bag is empty and a player has no tiles left.\The player with the most points wins.
 
 --- CREDITS ----------------------------------------------
 
-creditsTitle0 == Programming
-creditsContent0 == Bennet Freigang
+creditEntry_title0 == Programming
+creditEntry_content0 == Bennet Freigang\Alexander Giffey\Jarosch Hanke
 
-creditsTitle1 == Game Concept & Design
-creditsContent1 == [Name/Team]
+creditEntry_title1 == Game Concept & Design
+creditEntry_content1 == Bennet Freigang\Alexander Giffey\Jarosch Hanke
 
-creditsTitle2 == Assets & Graphics
-creditsContent2 == [Name/Team]
+creditEntry_title2 == Assets & Graphics
+creditEntry_content2 == Bennet Freigang\Alexander Giffey\Jarosch Hanke
 
-creditsTitle3 == Testing
-creditsContent3 == [Name/Team]
+creditEntry_title3 == Quality Assurance & Balancing
+creditEntry_content3 == Bennet Freigang\Alexander Giffey\Jarosch Hanke
 
-creditsTitle4 == Special Thanks
-creditsContent4 == Thanks for playing!
+creditEntry_title4 == Special Thanks
+creditEntry_content4 == Thanks for playing!
+
+creditEntry_title5 == Sounds
+creditEntry_content5 == win.wav: https://pixabay.com/sound-effects/musical-brass-fanfare-with\-timpani-and-winchimes-reverberated-146260/\turn_finished.wav: https://pixabay.com/sound-effects/\app-interface-click-2-476372/\increase_score.wav: https://pixabay.com/sound-effects/\film-special-effects-bonus-points-190035/\draw.wav: https://pixabay.com/sound-effects/\film-special-effects-placing-poker-chips-522521/\placetile: https://pixabay.com/de/sound-effects/natur-\the-sound-of-stones-the-impact-of-a-stone-звук-камней-удар-камня-9813/
+
+creditEntry_title6 == Fonts
+creditEntry_content6 == Higher Jump: https://www.1001fonts.com/higher-jump-font.html\Edosz: https://www.1001fonts.com/edo-sz-font.html\PolyRegular: https://www.1001fonts.com/poly-font.html\ARIAL
+
+creditEntry_title7 == Images
+creditEntry_content7 == https://www.vecteezy.com/vector-art/\22886555-vector-hand-drawn-square-frame-set-black-color-\frame-collection-vector-black-frame-collection\https://www.magnific.com/free-vector/paint-frames-collection_\1168917.htm#fromView=keyword&page=\2&position=0&uuid=17cae85a-1a76-47b2-90a1-\674855b64f9d&track=ais_hybrid&query=Brush+square\https://www.magnific.com/free-vector/\black-number-collection-chalk-style_2240667.\htm#fromView=keyword&page=1&position=3&uuid\=241ec825-9bcc-4f79-9117-ab427420bfba&\track=ais_hybrid&query=Brush+number\https://www.magnific.com/free-vector/hand-draw-gray\-watercolor-strock-design_21762395.htm#fromView=\search&page=1&position=6&uuid=0dc66507-\c15c-4645-b277-0ccf2f88b9e5&track=ais_\hybrid&query=Abstract+gray+\brush+strokes+background\https://www.magnific.com/free-vector/\elegant-colorful-watercolor-brush-stroke-modern-background_\393778952.htm#fromView=search&page=4&position=\7&uuid=9216eedf-77dd-4eb7-a212-907e490c2e08&track=\ais_hybrid&query=abstract+brush+strokes

@@ -1,13 +1,28 @@
 Deutsch
 
---- STARTMENU --------------------------------------------
+--- MENUS ------------------------------------------------
 
-title == QWIRKEL
-play == Starten
+play == Spielen
 settings == Einstellungen
-credits == Credits
+credits == Mitwirkende
 quit == Beenden
+apply == Übernehmen
 return == Zurück
+options == Optionen
+tutorial == Anleitung
+mainmenu == Hauptmenü
+language == Sprache
+volume == Lautstärke
+switch == Wechseln
+proceed == Weiter
+cancel == Abbrechen
+player == Spieler
+reloadrequest == Das Spiel muss neu geladen werden,\um diese Einstellung zu übernehmen.\Ungespeicherte Spielstände gehen verloren
+
+--- PLAYERSELECT -----------------------------------------
+
+playerselect_title == Wie viele Spieler?
+playerselect_content == Qwirkle wird mit 2 bis 4\Spielern gespielt.\Nutze die Pfeile, um\auszuwählen, wie viele von\euch mitspielen. Jeder\Spieler erhält einen\zufälligen Namen. Drücke auf\Spielen, sobald ihr\bereit seid!
 
 --- GAMEPLAY ---------------------------------------------
 
@@ -16,24 +31,56 @@ last_round == LETZTE RUNDE
 points_last_round == PUNKTE LETZTE RUNDE
 in_bag == IM BEUTEL
 game_settings == EINSTELLUNGEN
-turn == ZUG
-turn_place_tile == STEIN LEGEN
-turn_tile_placed == STEIN GELEGT
-turn_tiles_placed == STEINE GELEGT
+turn == Zug
+turn_place_tile == Lege einen Stein
+turn_tile_placed == Stein gelegt
+turn_tiles_placed == Steine gelegt
+
+--- TUTORIAL ---------------------------------------------
+
+tutorial_intro_title == Anleitung
+tutorial_intro_content == Willkommen bei Qwirkle!\Dieses Tutorial zeigt dir die Benutzeroberfläche\und erklärt, wie gespielt wird.\Du kannst das Menü jederzeit\mit [ ESC ] öffnen.\Drücke [ ENTER ], um fortzufahren
+
+tutorial_playerPoints_title == Punkte
+tutorial_playerPoints_content == Zeigt die Punkte des aktuellen Spielers an
+
+tutorial_bagIndicator_title == Beutel
+tutorial_bagIndicator_content == Zeigt an, wie viele Steine sich\noch im Beutel befinden.\Nach deinem Zug wird deine Hand\hieraus wieder aufgefüllt
+
+tutorial_nameIndicator_title == Zugreihenfolge
+tutorial_nameIndicator_content == Der große Name zeigt den Spieler,\der gerade am Zug ist.\Die Namen dahinter folgen danach
+
+tutorial_cardHotbar_title == Deine Steine
+tutorial_cardHotbar_content == Das sind die Steine auf deiner Hand.\Klicke auf einen Stein, um ihn auszuwählen,\klicke erneut, um die Auswahl aufzuheben
+
+tutorial_playground_title == Spielfeld
+tutorial_playground_content == Hier auf dem Spielfeld werden die Steine platziert
+
+tutorial_rules_title == Spielregeln
+tutorial_rules_content == Steine legen\Lege einen oder mehrere Steine in eine einzelne Reihe oder Spalte, ohne Lücken.\Deine Steine müssen an bereits liegende Steine angrenzen.\Alle Steine in einer Reihe teilen entweder dieselbe Farbe oder dasselbe Symbol,\wobei kein identischer Stein doppelt in einer Reihe vorkommen darf.\Punkte\Jede gelegte oder erweiterte Reihe bringt 1 Punkt pro Stein darin.\Ein Stein kann sowohl für seine Reihe als auch für seine Spalte gewertet werden.\Eine vollständige Reihe aus 6 Steinen ist ein Qwirkle und bringt 6 Zusatzpunkte!\Spielende\Das Spiel endet, wenn der Beutel leer ist und ein Spieler keine Steine mehr hat.\Der Spieler mit den meisten Punkten gewinnt.
 
 --- CREDITS ----------------------------------------------
 
-creditsTitle0 == Programmierung
-creditsContent0 == Bennet Freigang
+creditEntry_title0 == Programmierung
+creditEntry_content0 == Bennet Freigang\Alexander Giffey\Jarosch Hanke
 
-creditsTitle1 == Spielkonzept & Design
-creditsContent1 == [Name/Team einfügen]
+creditEntry_title1 == Spielkonzept & Design
+creditEntry_content1 == Bennet Freigang\Alexander Giffey\Jarosch Hanke
 
-creditsTitle2 == Assets & Grafik
-creditsContent2 == [Name/Team einfügen]
+creditEntry_title2 == Assets & Grafiken
+creditEntry_content2 == Bennet Freigang\Alexander Giffey\Jarosch Hanke
 
-creditsTitle3 == Testing
-creditsContent3 == [Name/Team einfügen]
+creditEntry_title3 == Qualitätssicherung und Balancing
+creditEntry_content3 == Bennet Freigang\Alexander Giffey\Jarosch Hanke
 
-creditsTitle4 == Besonderer Dank
-creditsContent4 == Danke fürs Spielen!
+creditEntry_title4 == Besonderer Dank
+creditEntry_content4 == Danke fürs Spielen!
+
+creditEntry_title5 == Sounds
+creditEntry_content5 == win.wav: https://pixabay.com/sound-effects/musical-brass-fanfare-with\-timpani-and-winchimes-reverberated-146260/\turn_finished.wav: https://pixabay.com/sound-effects/\app-interface-click-2-476372/\increase_score.wav: https://pixabay.com/sound-effects/\film-special-effects-bonus-points-190035/\draw.wav: https://pixabay.com/sound-effects/\film-special-effects-placing-poker-chips-522521/\placetile: https://pixabay.com/de/sound-effects/natur-\the-sound-of-stones-the-impact-of-a-stone-звук-камней-удар-камня-9813/
+
+creditEntry_title6 == Schriftarten
+creditEntry_content6 == Higher Jump: https://www.1001fonts.com/higher-jump-font.html\Edosz: https://www.1001fonts.com/edo-sz-font.html\PolyRegular: https://www.1001fonts.com/poly-font.html\ARIAL
+
+creditEntry_title7 == Bilder
+creditEntry_content7 == https://www.vecteezy.com/vector-art/\22886555-vector-hand-drawn-square-frame-set-black-color-\frame-collection-vector-black-frame-collection\https://www.magnific.com/free-vector/paint-frames-collection_\1168917.htm#fromView=keyword&page=\2&position=0&uuid=17cae85a-1a76-47b2-90a1-\674855b64f9d&track=ais_hybrid&query=Brush+square\https://www.magnific.com/free-vector/\black-number-collection-chalk-style_2240667.\htm#fromView=keyword&page=1&position=3&uuid\=241ec825-9bcc-4f79-9117-ab427420bfba&\track=ais_hybrid&query=Brush+number\https://www.magnific.com/free-vector/hand-draw-gray\-watercolor-strock-design_21762395.htm#fromView=\search&page=1&position=6&uuid=0dc66507-\c15c-4645-b277-0ccf2f88b9e5&track=ais_\hybrid&query=Abstract+gray+\brush+strokes+background\https://www.magnific.com/free-vector/\elegant-colorful-watercolor-brush-stroke-modern-background_\393778952.htm#fromView=search&page=4&position=\7&uuid=9216eedf-77dd-4eb7-a212-907e490c2e08&track=\ais_hybrid&query=abstract+brush+strokes

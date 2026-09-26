@@ -8,15 +8,12 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 public class Scene {
     protected final List<Entity> sceneEntities = new CopyOnWriteArrayList<>();
+    public boolean created = false;
 
     public int getWidth() { return EngineConfig.WINDOW_WIDTH; }
     public int getHeight() { return EngineConfig.WINDOW_HEIGHT; }
     public int getCenterX() { return (int) (getWidth() / 2.0); }
     public int getCenterY() { return (int) (getHeight() / 2.0); }
-
-    public Scene() {
-        onCreate();
-    }
 
     /**
      * Called automatically during Scene creation
@@ -69,6 +66,16 @@ public class Scene {
         }
     }
 
+    public void create() {
+        if (created) return;
+        created = true;
+        try {
+            onCreate();
+        } catch (Throwable t) {
+            EngineConfig.message("Throwable Error in onCreate() of " + getClass().getSimpleName() + ": " + t.getMessage(), getClass().getSimpleName(), EngineConfig.messageType.ERROR);
+        }
+    }
+
     public void update(double dt) {
         onTick(dt);
         for (Entity entity : sceneEntities) {
@@ -89,9 +96,9 @@ public class Scene {
     /**
      * @return the scene's entities ordered by {@link Entity#renderOrder}, lowest first
      * @note Sorts a copy rather than {@link #sceneEntities} itself, since reordering a
-     *       CopyOnWriteArrayList copies the whole backing array on every write.
+     *  copyOnWriteArrayList copies the whole backing array on every write.
      * @implNote {@link List#sort} is stable, so entities sharing a renderOrder keep the
-     *           order they were added in.
+     *  order they were added in
      */
     private List<Entity> getRenderOrderedEntities() {
         List<Entity> ordered = new ArrayList<>(sceneEntities);

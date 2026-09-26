@@ -20,7 +20,9 @@ public abstract class Entity {
         TOP_LEFT(0.0, 0.0),
         TOP_MID(0.5, 0.0),
         TOP_RIGHT(1.0, 0.0),
+        CENTER_LEFT(0.0,0.5),
         CENTER(0.5, 0.5),
+        CENTER_RIGHT(1.0, 0.5),
         BOTTOM_LEFT(0.0, 1.0),
         BOTTOM_MID(0.5, 1.0),
         BOTTOM_RIGHT(1.0, 1.0);
@@ -38,14 +40,14 @@ public abstract class Entity {
      * The Origin of an entity is the anchor point
      * used as the absolute reference for its position,
      * rotation and scaling in the Scene
-     * @see Entity.OriginPresets
+     * @see OriginPresets
      * */
     public OriginPresets origin = OriginPresets.TOP_LEFT;
 
     public double x = 0;
     public double y = 0;
-    public int targetX = 0;
-    public int targetY = 0;
+    public double targetX = 0;
+    public double targetY = 0;
     public double rotation = 0;
 
     /**
@@ -99,7 +101,7 @@ public abstract class Entity {
 
     /**
      * Simple Method to set a Entity bound texture that also acts as the entities "hitbox"
-     * @param identifier texture Identifier (view: {@link quirkle.engine.AssetManager#getTexture(String)})
+     * @param identifier texture Identifier (view: {@link AssetManager#getTexture(String)})
      */
     public void setSprite(String identifier) {
         this.spritePath = identifier;
@@ -198,12 +200,22 @@ public abstract class Entity {
         g.setFont(font);
 
         FontMetrics fm = g.getFontMetrics(font);
-        int textWidth = fm.stringWidth(msg);
-        int textHeight = fm.getHeight();
+
+        // Split message by backslash to support multiline text
+        String[] lines = msg.split("\\\\", -1);
+
+        // Calculate total height and max width
+        int lineHeight = fm.getHeight();
+        int totalHeight = lineHeight * lines.length;
+        int maxWidth = 0;
+        for (String line : lines) {
+            maxWidth = Math.max(maxWidth, fm.stringWidth(line));
+        }
+
         int textAscent = fm.getAscent();
 
-        int drawX = (int) (x - (origin.x * textWidth));
-        int drawY = (int) (y - (origin.y * textHeight) + textAscent);
+        int drawX = (int) (x - (origin.x * maxWidth));
+        int drawY = (int) (y - (origin.y * totalHeight) + textAscent);
 
         Graphics2D isoTextGraphic = (Graphics2D) g.create();
         isoTextGraphic.setFont(font);
@@ -213,18 +225,22 @@ public abstract class Entity {
             isoTextGraphic.rotate(Math.toRadians(rotation), x, y);
         }
 
-        isoTextGraphic.drawString(msg, drawX, drawY);
+        // Draw each line
+        for (int i = 0; i < lines.length; i++) {
+            isoTextGraphic.drawString(lines[i], drawX, drawY + (i * lineHeight));
+        }
+
         isoTextGraphic.dispose();
     }
 
     /**
      * Helper function to draw Sprites. Should be used inside the {@link #onRender()} hook.
-     * @param spriteIdentifier sprite name including possible subdir inside {@link quirkle.engine.EngineConfig#TEXTURE_SUBDIR} without filetype suffix
+     * @param spriteIdentifier sprite name including possible subdir inside {@link EngineConfig#TEXTURE_SUBDIR} without filetype suffix
      * @param scale scale multiplier (scale = 1.0: rendering the texture at its original scale)
      * @param x coordinate
      * @param y coordinate
      * @param rotation rotation in degrees
-     * @param origin origin of the texture element of type {@link quirkle.engine.Entity.OriginPresets}
+     * @param origin origin of the texture element of type {@link OriginPresets}
      * @param g Graphics2D (isolated child is created inside the function itself)
      */
     public void drawSprite(String spriteIdentifier, double scale, double x, double y, double rotation, OriginPresets origin, Graphics2D g) {
@@ -244,7 +260,7 @@ public abstract class Entity {
 
     /**
      * handles entity initialisation by calling the {@link #onCreate()} hook, catching errors if necessary.
-     * Is called after the related Scene called {@link quirkle.engine.Scene#addEntities()}
+     * Is called after the related Scene called {@link Scene#addEntities()}
      */
     public void create() {
         if (created) return;
@@ -292,13 +308,23 @@ public abstract class Entity {
             gSprite.dispose();
         }
 
-        onRender(g);
+        try {
+            onRender(g);
+        } catch (Throwable t) {
+            EngineConfig.message("Throwable Error in onRender() of " + getClass().getSimpleName() + ": " + t.getMessage(), getClass().getSimpleName(), EngineConfig.messageType.ERROR);
+        }
     }
 
     public void destroy() {
         if (!destroyed) {
+
             destroyed = true;
-            onDestroy();
+            try {
+                onDestroy();
+                destroyed = true;
+            } catch (Throwable t) {
+                EngineConfig.message("Throwable Error in onDestroy() of " + getClass().getSimpleName() + ": " + t.getMessage(), getClass().getSimpleName(), EngineConfig.messageType.ERROR);
+            }
         }
     }
 }

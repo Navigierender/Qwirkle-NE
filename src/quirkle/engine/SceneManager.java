@@ -9,10 +9,15 @@ public class SceneManager {
     private static Scene storedScene;
 
     public static void setScene(Scene newScene) {
-        if (currentScene != null) {
-            currentScene.destroy();
-        }
+        if (currentScene != null) currentScene.destroy();
+
         currentScene = newScene;
+        currentScene.create();
+
+        if (storedScene != null) {
+            storedScene.destroy();
+            storedScene = null;
+        }
     }
 
     private static boolean renderStoredScene;
@@ -35,9 +40,11 @@ public class SceneManager {
             currentScene.destroy();
             currentScene = tempScene;
         }   else    {
-            currentScene = tempScene;
             storedScene = currentScene;
+            currentScene = tempScene;
         }
+
+        currentScene.create();
 
         renderStoredScene = _renderStoredScene;
         pauseStoredScene = _pauseStoredScene;
@@ -70,14 +77,14 @@ public class SceneManager {
     }
 
     public static void render(Graphics2D g) {
-        if (currentScene != null) {
-            g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, currentSceneAlpha));
-            currentScene.render(g);
-        }
-
         if (renderStoredScene && storedScene != null) {
             g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, storedSceneAlpha));
             storedScene.render(g);
+        }
+
+        if (currentScene != null) {
+            g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, currentSceneAlpha));
+            currentScene.render(g);
         }
     }
 }

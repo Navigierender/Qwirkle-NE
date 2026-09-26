@@ -8,7 +8,7 @@ import java.awt.Color;
 public class EngineConfig {
     public final static String VERSION_INFO = "[BETA] v0.2.3";
 
-    public static boolean SUPPRES_INFO = false;
+    public static boolean SUPPRES_INFO = true;
     public static boolean SUPPRES_WARNINGS = false;
 
     public final static String ASSET_ORIGIN = "/assets";
