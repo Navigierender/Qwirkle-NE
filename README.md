@@ -1,27 +1,28 @@
-# Anwendungsorientierte Programmierung (C680) – Qwirkle
-## Gruppenmitglieder
-- Bennet Freigang
-- Jarosh Hanke
-- Alex Giffy
+![Qwirkle logo](https://github.com/bennetfreigang/AOP-Projekt/blob/main/src/assets/textures/startmenu/title.png)
 
-## Allgemeine Informationen
-- Java 21, Eclipse 2025-12, **Swing-Pflicht**
-- Objektorientiert, klare Trennung Logik/GUI (MVP- oder MVVM-Muster)
-- Debug-Modus verpflichtend (freies Platzieren von Steinen/Würfeln etc.)
-- Gruppengröße: 3 Studierende
-- **Deckblatt-Deadline:** 08.08.2026, 12:00 Uhr
-- **Projekt-Abgabe:** 14.09.2026, 12:00 Uhr
+## 📣 Disclaimer
 
-## [Qwirkle](./Qwirkle.pdf)
+This project is an independent, non-commercial implementation that was created 
+for educational purposes as part of a university assignment
 
-Qwirkle ist ein Strategiespiel für zwei bis vier Spieler. Die Spieler legen Spielsteine mit unterschiedlichen Farben und Symbolen auf einem gemeinsamen Spielfeld ab. Ziel des Spiels ist es, möglichst viele Punkte zu erzielen, indem Reihen gleicher Farbe oder gleichen Symbols gebildet werden.
+"Qwirkle" is a registered trademark of MindWare.
+**This project is not affiliated with, endorsed by, or sponsored by MindWare!**
+No claim is made to the Qwirkle 
+trademark, name, or any official Qwirkle branding, artwork, or assets.
 
-## Git-Workflow
+## 🚧 State of Development
 
-- **main** ist geschützt – kein direkter Push, nur per Pull Request
-- Arbeit erfolgt auf eigenen Branches
-- Vor dem Merge:
-  - Mind. 1 Review durch ein Teammitglied
-  - Build muss erfolgreich durchlaufen (lokal oder via CI, falls eingerichtet)
-- Merge-Strategie: **Squash Merge** (ein sauberer Commit pro Feature)
-- Commit-Nachrichten kurz & aussagekräftig (z. B. `feat: Spielbrett-Logik hinzugefügt`)
+The Core Game is finished, and its extension i currently not planned.
+There are some nice to have quality-of-life additions that may be implemented at some point.
+
+**We already submitted our assigment so continued development is not guaranteed!**
+
+---
+
+### Main Contributors
+
+<img src="https://github.com/bennetfreigang.png" width="20" height="20" alt="Profilepic" /> [Bennetfreigang](https://github.com/bennetfreigang)
+
+<img src="https://github.com/Navigierender.png" width="20" height="20" alt="Profilepic" /> [Navigierender](https://github.com/Navigierender)
+
+<img src="https://github.com/alxgfy.png" width="20" height="20" alt="Profilepic" /> [AlexGfy](https://github.com/AlxGfy)
