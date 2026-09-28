@@ -1,4 +1,4 @@
-![Qwirkle logo](https://github.com/bennetfreigang/AOP-Projekt/blob/main/src/assets/textures/startmenu/title.png)
+![Qwirkle logo](https://github.com/Navigierender/Qwirkle-NE/blob/main/src/main/resources/assets/textures/startmenu/title.png)
 
 ## 📣 Disclaimer
 
