@@ -10,12 +10,22 @@ for educational purposes as part of a university assignment
 No claim is made to the Qwirkle 
 trademark, name, or any official Qwirkle branding, artwork, or assets.
 
+## 🛠️ Building
+
+_The Project was moved over to gradle, so you can just do:_
+
+```
+gradlew build
+```
+
 ## 🚧 State of Development
 
 The Core Game is finished, and its extension i currently not planned.
-There are some nice to have quality-of-life additions that may be implemented at some point.
+There are some nice to have quality-of-life additions that may be implemented at some point, just because its a nice project to work on.
 
-**We already submitted our assigment so continued development is not guaranteed!**
+**We already submitted our assigment so ...**
+
+_I didnt want to broudly accept explicit AI additions after we finished the original assessment, so i made this Fork_
 
 ---
 

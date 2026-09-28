@@ -1,2 +1,7 @@
 /bin/
+/build/
+/.gradle/
+/.idea/
+/.vscode/
+/.zed/
 .DS_Store
