@@ -1,6 +1,6 @@
 package quirkle.game.gameplay.ui;
 
-import quirkle.engine.AssetManager;
+import org.navigierender.rslair.AssetManager;
 import quirkle.game.gameplay.tiles.TileBag;
 
 import java.awt.Graphics2D;

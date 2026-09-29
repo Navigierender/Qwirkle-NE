@@ -1,7 +1,7 @@
 package quirkle.game.settings.entities;
 
-import quirkle.engine.Entity;
-import quirkle.engine.InputManager;
+import org.navigierender.rslair.Entity;
+import org.navigierender.rslair.InputManager;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

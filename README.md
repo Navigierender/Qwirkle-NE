@@ -18,6 +18,14 @@ _The Project was moved over to gradle, so you can just do:_
 gradlew build
 ```
 
+### Info
+This repo currently includes an unreleased snapshot
+of what is now a standalone version of my original Abstraction Layer: _ResourceLair (0.2.3-SNAPSHOT)_
+
+If you have problems compiling its probably because of this shift
+
+_also i dont really want to learn maven packaging at the moment, at least not for continuing an already graded university project noone will ever find_
+
 ## 🚧 State of Development
 
 The Core Game is finished, and its extension i currently not planned.

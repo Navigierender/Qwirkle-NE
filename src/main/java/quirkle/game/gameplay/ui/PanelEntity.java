@@ -1,6 +1,6 @@
 package quirkle.game.gameplay.ui;
 
-import quirkle.engine.Entity;
+import org.navigierender.rslair.Entity;
 
 public abstract class PanelEntity extends Entity {
 

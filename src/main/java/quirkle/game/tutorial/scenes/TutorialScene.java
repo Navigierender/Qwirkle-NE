@@ -1,6 +1,6 @@
 package quirkle.game.tutorial.scenes;
 
-import quirkle.engine.*;
+import org.navigierender.rslair.*;
 import quirkle.game.tutorial.entities.TutorialEntry;
 import quirkle.game.tutorial.entities.TutorialIntro;
 import quirkle.game.util.PlayRandomSound;

@@ -1,6 +1,6 @@
 package quirkle.game.settings.entities;
 
-import quirkle.engine.AssetManager;
+import org.navigierender.rslair.AssetManager;
 import quirkle.game.util.RectangularButton;
 
 import java.util.List;

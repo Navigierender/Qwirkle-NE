@@ -1,6 +1,6 @@
 package quirkle.game.gameplay.board;
 
-import quirkle.engine.Entity;
+import org.navigierender.rslair.Entity;
 import quirkle.game.gameplay.ui.UiTheme;
 
 import java.awt.BasicStroke;

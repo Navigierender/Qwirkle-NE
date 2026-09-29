@@ -1,9 +1,9 @@
 package quirkle.game.util;
 
-import quirkle.engine.AssetManager;
-import quirkle.engine.Entity;
-import quirkle.engine.Scene;
-import quirkle.engine.SceneManager;
+import org.navigierender.rslair.AssetManager;
+import org.navigierender.rslair.Entity;
+import org.navigierender.rslair.Scene;
+import org.navigierender.rslair.SceneManager;
 import quirkle.game.startmenu.scenes.StartMenuScene;
 
 import java.awt.*;

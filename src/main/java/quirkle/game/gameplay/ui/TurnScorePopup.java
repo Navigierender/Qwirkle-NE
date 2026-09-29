@@ -1,6 +1,6 @@
 package quirkle.game.gameplay.ui;
 
-import quirkle.engine.Entity;
+import org.navigierender.rslair.Entity;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

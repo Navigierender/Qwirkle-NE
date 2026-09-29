@@ -1,6 +1,6 @@
 package quirkle.game.debug;
 
-import quirkle.engine.EngineConfig;
+import org.navigierender.rslair.Config;
 import quirkle.game.gameplay.Game;
 import quirkle.game.gameplay.board.Board;
 import quirkle.game.gameplay.board.PlacementResult;
@@ -27,13 +27,13 @@ public final class DebugMode {
     /** sets the game the debug actions work on */
     public static void attach(Game currentGame) {
         game = currentGame;
-        EngineConfig.message("attached to a game", DebugMode.class.getSimpleName(), EngineConfig.messageType.INFO);
+        Config.message("attached to a game", DebugMode.class.getSimpleName(), Config.messageType.INFO);
     }
 
     /** removes the game again, actions abort until the next attach */
     public static void detach() {
         game = null;
-        EngineConfig.message("detached", DebugMode.class.getSimpleName(), EngineConfig.messageType.INFO);
+        Config.message("detached", DebugMode.class.getSimpleName(), Config.messageType.INFO);
     }
 
     /** @return true if a game is attached */

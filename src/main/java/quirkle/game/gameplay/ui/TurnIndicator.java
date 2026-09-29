@@ -1,7 +1,7 @@
 package quirkle.game.gameplay.ui;
 
-import quirkle.engine.AssetManager;
-import quirkle.engine.Entity;
+import org.navigierender.rslair.AssetManager;
+import org.navigierender.rslair.Entity;
 import quirkle.game.gameplay.Game;
 import quirkle.game.gameplay.player.Player;
 

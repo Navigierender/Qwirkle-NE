@@ -1,6 +1,6 @@
 package quirkle.game.credits.scenes;
 
-import quirkle.engine.*;
+import org.navigierender.rslair.*;
 import quirkle.game.credits.entities.*;
 import quirkle.game.util.*;
 

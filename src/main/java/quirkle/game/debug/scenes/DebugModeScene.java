@@ -1,7 +1,7 @@
 package quirkle.game.debug.scenes;
 
-import quirkle.engine.Entity;
-import quirkle.engine.Scene;
+import org.navigierender.rslair.Entity;
+import org.navigierender.rslair.Scene;
 import quirkle.game.debug.DebugAction;
 import quirkle.game.debug.DebugMode;
 import quirkle.game.gameplay.ui.SideButton;

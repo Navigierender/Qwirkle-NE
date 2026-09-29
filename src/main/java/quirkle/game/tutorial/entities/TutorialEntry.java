@@ -1,7 +1,7 @@
 package quirkle.game.tutorial.entities;
 
-import quirkle.engine.EngineConfig;
-import quirkle.engine.Entity;
+import org.navigierender.rslair.Config;
+import org.navigierender.rslair.Entity;
 
 import java.awt.*;
 
@@ -68,7 +68,7 @@ public class TutorialEntry extends Entity {
         else if (horizontalAlignment == -1 && verticalAlignment == 1) textOrigin = OriginPresets.TOP_RIGHT;
         else if (horizontalAlignment == 1 && verticalAlignment == -1) textOrigin = OriginPresets.BOTTOM_LEFT;
         else if (horizontalAlignment == -1 && verticalAlignment == -1) textOrigin = OriginPresets.BOTTOM_RIGHT;
-        else EngineConfig.message("Unknown text Alignment parsed to TutorialEntry", "TutorialEntry", EngineConfig.messageType.ERROR);
+        else Config.message("Unknown text Alignment parsed to TutorialEntry", "TutorialEntry", Config.messageType.ERROR);
     }
 
     @Override

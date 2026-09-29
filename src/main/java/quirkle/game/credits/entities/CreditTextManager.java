@@ -1,6 +1,6 @@
 package quirkle.game.credits.entities;
 
-import quirkle.engine.*;
+import org.navigierender.rslair.*;
 
 import java.awt.Color;
 import java.awt.Graphics2D;

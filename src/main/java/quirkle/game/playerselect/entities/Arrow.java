@@ -1,6 +1,6 @@
 package quirkle.game.playerselect.entities;
 
-import quirkle.engine.*;
+import org.navigierender.rslair.*;
 
 public class Arrow extends Entity {
     public double minSize = 1.0;

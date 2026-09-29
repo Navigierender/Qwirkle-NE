@@ -1,8 +1,8 @@
 package quirkle.game.gameplay.ui;
 
-import quirkle.engine.AssetManager;
-import quirkle.engine.EngineConfig;
-import quirkle.engine.Entity;
+import org.navigierender.rslair.AssetManager;
+import org.navigierender.rslair.Config;
+import org.navigierender.rslair.Entity;
 
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -27,8 +27,8 @@ public class BoardFrame extends Entity {
     }
 
     private static BufferedImage scaleToWindow(BufferedImage source) {
-        int width = EngineConfig.WINDOW_WIDTH;
-        int height = EngineConfig.WINDOW_HEIGHT;
+        int width = Config.WINDOW_WIDTH;
+        int height = Config.WINDOW_HEIGHT;
 
         BufferedImage scaled = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 

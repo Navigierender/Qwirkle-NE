@@ -1,7 +1,7 @@
 package quirkle.game.gameplay.board;
 
-import quirkle.engine.EngineConfig;
-import quirkle.engine.Entity;
+import org.navigierender.rslair.Config;
+import org.navigierender.rslair.Entity;
 import quirkle.game.gameplay.tiles.BoardTileEntity;
 import quirkle.game.gameplay.tiles.Tile;
 import quirkle.game.gameplay.ui.UiTheme;
@@ -39,7 +39,7 @@ public class BoardView extends Entity {
     }
 
     private static Rectangle windowBounds() {
-        return new Rectangle(0, 0, EngineConfig.WINDOW_WIDTH, EngineConfig.WINDOW_HEIGHT);
+        return new Rectangle(0, 0, Config.WINDOW_WIDTH, Config.WINDOW_HEIGHT);
     }
 
     public boolean contains(int screenX, int screenY) {

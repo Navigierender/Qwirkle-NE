@@ -1,7 +1,7 @@
 package quirkle.game.quickmenu.scenes;
 
 import quirkle.PersistentData;
-import quirkle.engine.*;
+import org.navigierender.rslair.*;
 
 import quirkle.game.credits.scenes.CreditsScene;
 import quirkle.game.debug.DebugIndicator;

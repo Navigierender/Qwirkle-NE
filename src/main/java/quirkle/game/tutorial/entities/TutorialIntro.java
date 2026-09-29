@@ -1,7 +1,7 @@
 package quirkle.game.tutorial.entities;
 
-import quirkle.engine.Entity;
-import quirkle.engine.SceneManager;
+import org.navigierender.rslair.Entity;
+import org.navigierender.rslair.SceneManager;
 
 import java.awt.*;
 

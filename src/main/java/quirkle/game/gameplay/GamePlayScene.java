@@ -1,6 +1,6 @@
 package quirkle.game.gameplay;
 
-import quirkle.engine.*;
+import org.navigierender.rslair.*;
 import quirkle.game.debug.DebugMode;
 import quirkle.game.endgame.scenes.EndGameScene;
 import quirkle.game.gameplay.board.*;
@@ -156,7 +156,7 @@ public class GamePlayScene extends Scene {
         } catch (IllegalStateException e) {
             // Feld belegt oder Platzierung verstößt gegen die Qwirkle-Regeln -> Klick wird ignoriert
             tileRack.rejectSelection();
-            EngineConfig.message(e.getMessage(), getClass().getSimpleName(), EngineConfig.messageType.INFO);
+            Config.message(e.getMessage(), getClass().getSimpleName(), Config.messageType.INFO);
             AssetManager.playSound("problem", 1.0);
         }
     }
@@ -202,7 +202,7 @@ public class GamePlayScene extends Scene {
             }
         } catch (IllegalStateException e) {
             // Zug ist noch nicht abschließbar (z.B. kein Stein gelegt) -> Eingabe wird ignoriert
-            EngineConfig.message(e.getMessage(), getClass().getSimpleName(), EngineConfig.messageType.INFO);
+            Config.message(e.getMessage(), getClass().getSimpleName(), Config.messageType.INFO);
         }
     }
 }

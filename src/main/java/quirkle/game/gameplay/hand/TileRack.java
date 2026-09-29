@@ -1,8 +1,8 @@
 package quirkle.game.gameplay.hand;
 
-import quirkle.engine.AssetManager;
-import quirkle.engine.InputManager;
-import quirkle.engine.extensions.RecolorUtil;
+import org.navigierender.rslair.AssetManager;
+import org.navigierender.rslair.InputManager;
+import org.navigierender.rslair.extensions.RecolorUtil;
 import quirkle.game.gameplay.player.Player;
 import quirkle.game.gameplay.tiles.Tile;
 import quirkle.game.gameplay.ui.Handover;

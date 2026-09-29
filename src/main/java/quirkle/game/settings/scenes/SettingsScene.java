@@ -1,7 +1,7 @@
 package quirkle.game.settings.scenes;
 
 import quirkle.PersistentData;
-import quirkle.engine.*;
+import org.navigierender.rslair.*;
 import quirkle.game.settings.entities.LanguageSwitchButton;
 import quirkle.game.settings.entities.SoundVolumeSlider;
 import quirkle.game.util.*;
@@ -46,7 +46,7 @@ public class SettingsScene extends Scene {
 
         languageSwitchButton = new LanguageSwitchButton();
         languageValueLabel = new SimpleTextEntity(AssetManager.getLangName(), 40, "poly_regular", Color.WHITE, Entity.OriginPresets.CENTER_LEFT);
-        volumeSlider = new SoundVolumeSlider((int) Math.round(EngineConfig.VOLUME_MAIN * 100));
+        volumeSlider = new SoundVolumeSlider((int) Math.round(Config.VOLUME_MAIN * 100));
 
         addEntities(background, title, uiLine, languageLabel, languageSwitchButton, languageValueLabel, volumeLabel, volumeSlider, returnButton, applyButton);
 
@@ -81,7 +81,7 @@ public class SettingsScene extends Scene {
         }
 
         if (applyButton.isClicked() || InputManager.isKeyPressed(KeyEvent.VK_ENTER)) {
-            EngineConfig.VOLUME_MAIN = volumeSlider.getValue() / 100.0;
+            Config.VOLUME_MAIN = volumeSlider.getValue() / 100.0;
             PersistentData.lang = AssetManager.getLangIdentifier();
             SceneManager.setTempScene(new ReloadDialogBox(AssetManager.getMessage("reloadrequest")), false, true);
         }

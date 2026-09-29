@@ -2,7 +2,7 @@ package quirkle.game.startmenu.entities;
 
 import java.awt.Graphics2D;
 
-import quirkle.engine.*;
+import org.navigierender.rslair.*;
 
 public class Title extends Entity {
 

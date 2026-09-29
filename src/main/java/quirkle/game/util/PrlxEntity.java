@@ -1,6 +1,6 @@
 package quirkle.game.util;
 
-import quirkle.engine.*;
+import org.navigierender.rslair.*;
 
 import java.awt.Graphics2D;
 import java.util.ArrayList;

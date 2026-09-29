@@ -1,6 +1,6 @@
 package quirkle.game.gameplay.player;
 
-import quirkle.engine.AssetManager;
+import org.navigierender.rslair.AssetManager;
 import quirkle.game.gameplay.tiles.Tile;
 import quirkle.game.gameplay.tiles.TileBag;
 

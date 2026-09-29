@@ -1,7 +1,7 @@
 package quirkle.game.gameplay.tiles;
 
-import quirkle.engine.Entity;
-import quirkle.engine.InputManager;
+import org.navigierender.rslair.Entity;
+import org.navigierender.rslair.InputManager;
 import quirkle.game.gameplay.ui.UiTheme;
 
 import java.awt.BasicStroke;

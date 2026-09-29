@@ -1,7 +1,7 @@
 package quirkle.game.gameplay.ui;
 
-import quirkle.engine.AssetManager;
-import quirkle.engine.EngineConfig;
+import org.navigierender.rslair.AssetManager;
+import org.navigierender.rslair.Config;
 
 import java.awt.Color;
 import java.awt.Rectangle;
@@ -66,8 +66,8 @@ public final class UiTheme {
     private static final double FRAME_OPENING_BOTTOM = 889.0;
 
     public static Rectangle boardViewport() {
-        double scaleX = EngineConfig.WINDOW_WIDTH / FRAME_SOURCE_WIDTH;
-        double scaleY = EngineConfig.WINDOW_HEIGHT / FRAME_SOURCE_HEIGHT;
+        double scaleX = Config.WINDOW_WIDTH / FRAME_SOURCE_WIDTH;
+        double scaleY = Config.WINDOW_HEIGHT / FRAME_SOURCE_HEIGHT;
 
         int left = (int) Math.round(FRAME_OPENING_LEFT * scaleX);
         int top = (int) Math.round(FRAME_OPENING_TOP * scaleY);
@@ -123,7 +123,7 @@ public final class UiTheme {
     public static final int CARD_HEIGHT = 472;
 
     public static int cardTop() {
-        return EngineConfig.WINDOW_HEIGHT - CARD_BOTTOM_MARGIN - CARD_HEIGHT;
+        return Config.WINDOW_HEIGHT - CARD_BOTTOM_MARGIN - CARD_HEIGHT;
     }
 
     // Layout: tile bag counter, bottom right
@@ -135,11 +135,11 @@ public final class UiTheme {
     public static final int BAG_MARGIN_Y = 205;
 
     public static int bagCenterX() {
-        return EngineConfig.WINDOW_WIDTH - BAG_MARGIN_X;
+        return Config.WINDOW_WIDTH - BAG_MARGIN_X;
     }
 
     public static int bagCenterY() {
-        return EngineConfig.WINDOW_HEIGHT - BAG_MARGIN_Y;
+        return Config.WINDOW_HEIGHT - BAG_MARGIN_Y;
     }
 
     // Layout: the active player's rack along the bottom
@@ -162,7 +162,7 @@ public final class UiTheme {
     public static final double HANDOVER_PHASE_SECONDS = 0.2;
 
     public static int rackHiddenCenterY() {
-        return EngineConfig.WINDOW_HEIGHT + RACK_TILE_SIZE;
+        return Config.WINDOW_HEIGHT + RACK_TILE_SIZE;
     }
 
     // Layout: side buttons

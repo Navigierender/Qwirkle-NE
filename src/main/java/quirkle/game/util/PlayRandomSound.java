@@ -1,6 +1,6 @@
 package quirkle.game.util;
 
-import quirkle.engine.AssetManager;
+import org.navigierender.rslair.AssetManager;
 
 public class PlayRandomSound {
 

@@ -1,6 +1,6 @@
 package quirkle.game.gameplay.ui;
 
-import quirkle.engine.InputManager;
+import org.navigierender.rslair.InputManager;
 
 import java.awt.AlphaComposite;
 import java.awt.BasicStroke;

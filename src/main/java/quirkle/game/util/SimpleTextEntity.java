@@ -1,6 +1,6 @@
 package quirkle.game.util;
 
-import quirkle.engine.Entity;
+import org.navigierender.rslair.Entity;
 
 import java.awt.*;
 
